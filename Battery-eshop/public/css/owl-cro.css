@@ -1,0 +1,25 @@
+.home-demo .item {
+    background:white;
+}
+.home-demo .item  img{
+    width: 100%;
+    height: 35vh;
+
+}
+.home-demo .item  p{
+    text-align: center;
+    padding: 1rem;
+}
+.home-demo .item h6{
+    text-align: center;
+    padding: 1rem;
+}
+
+.home-demo h2 {
+    color: black;
+    text-align: center;
+    /* padding: 5rem 0; */
+    margin: 0;
+    font-style: italic;
+    font-weight: 300;
+}

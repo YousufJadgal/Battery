@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Battery E-shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    <link rel="stylesheet" href="{{url('css/open-iconic-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/animate.css')}}">
+    <link rel="stylesheet" href="{{url('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{url('css/uicons-regular-rounded.css')}}">
+    <link rel="stylesheet" href="{{url('css/aos.css')}}">
+    <link rel="stylesheet" href="{{url('css/ionicons.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/bootstrap-datepicker.css')}}">
+    <link rel="stylesheet" href="{{url('css/jquery.timepicker.css')}}">
+    <link rel="stylesheet" href="{{url('css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{url('css/icomoon.css')}}">
+    <link rel="stylesheet" href="{{url('css/style.css')}}">
+    <link rel="stylesheet" href="{{url('css/modal.css')}}">
+
+	
+  </head>
+  <body > <!-- class="goto-here" -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="/">Battery-eshop</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span>MENU
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="/shop" class="nav-link">Batteries</a></li>
+	          <li class="nav-item"><a href="/shop" class="nav-link">UPS</a></li>
+	          <li class="nav-item"><a href="/shop" class="nav-link">Solar Panel</a></li>
+	          <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+	          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Products</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="#">Emergency Kits</a>
+                <a class="dropdown-item" href="#">Power Utilities</a>
+              </div>
+            </li>
+
+            <li class="nav-item"><a href="/cart" class="nav-link"><i class="fa fa-shopping-cart" style="color: #000000; font-size:15px"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"data-toggle="modal" data-target="#loginModal"><i class="fas fa-user" style="color: #000000; font-size:15px"></i></a></li>
+	        </ul>
+          
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-title text-center">
+          <h4>Login</h4>
+        </div>
+        <div class="d-flex flex-column text-center">
+          <form action="" method="post">
+            @csrf
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email1"placeholder="Your email address...">
+              @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="password" id="password1" placeholder="Your password...">
+              @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+            </div>
+            <button type="submit" class="btn-custom btn-block btn-round">Login</button>
+          </form>
+      </div>
+    </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <div class="signup-section">Not a member yet? <a href="#a" class="a-custom"> Sign Up</a>.</div>
+      </div>
+  </div>
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+    <!-- END nav -->
+@yield('content')
+	
+
+
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+      	<div class="row">
+      		<div class="mouse">
+						<a href="#" class="mouse-icon">
+							<div class="mouse-wheel"><span class="fas fa-angle-up"></span></div>
+						</a>
+					</div>
+      	</div>
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Battery - eshop</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, veritatis..</p>
+                       </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Menu</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Shop</a></li>
+                <li><a href="#" class="py-2 d-block">About</a></li>
+                <li><a href="#" class="py-2 d-block">Journal</a></li>
+                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Help</h2>
+              <div class="d-flex">
+	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+	                <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
+	                <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
+	                <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
+	                <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+	              </ul>
+	              <ul class="list-unstyled">
+	                <li><a href="#" class="py-2 d-block">FAQs</a></li>
+	                <li><a href="#" class="py-2 d-block">Contact</a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><a href="#"><span class="fa fa-map">&nbsp&nbsp&nbsp</span><span class="text" > Cheel Chok Lyari</span></a></li>
+	                <li><a href="#"><span class="fa fa-phone">&nbsp&nbsp&nbsp</span><span class="text">0313123456789</span></a></li>
+	                <li><a href="#"><span class="fa fa-envelope">&nbsp&nbsp&nbsp</span><span class="text">Youremail@aptechgdn.net </span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p>
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved   by Aptech Garden</a>
+						  
+						</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/modal.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
