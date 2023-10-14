@@ -45,7 +45,7 @@
             </li>
 
             <li class="nav-item"><a href="/cart" class="nav-link"><i class="fa fa-shopping-cart" ></i></a></li>
-            <li class="nav-item"><a href="/login" class="nav-link"><i class="fas fa-user" ></i></a></li>
+            <li class="nav-item"><a href="/login" class="nav-link"><i class="fa fa-user" ></i></a></li>
 	        </ul>
 </nav>
 
@@ -74,7 +74,7 @@
       	<div class="row">
       		<div class="mouse">
 						<a href="#" class="mouse-icon">
-							<div class="mouse-wheel"><span class="fas fa-angle-up"></span></div>
+							<div class="mouse-wheel"><span class="fa fa-angle-up"></span></div>
 						</a>
 					</div>
       	</div>
@@ -136,7 +136,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    
     
   
 
@@ -155,11 +155,13 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/modal.js"></script>
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  
   <script src="js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  </footer>
   </body>
 </html>
