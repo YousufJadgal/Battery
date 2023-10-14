@@ -7,6 +7,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    <link rel="stylesheet" href="{{url('css/open-iconic-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url('css/animate.css')}}">
     <link rel="stylesheet" href="{{url('css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{url('css/owl.theme.default.min.css')}}">
@@ -19,9 +20,7 @@
     <link rel="stylesheet" href="{{url('css/flaticon.css')}}">
     <link rel="stylesheet" href="{{url('css/icomoon.css')}}">
     <link rel="stylesheet" href="{{url('css/style.css')}}">
-    <link rel="stylesheet" href="{{url('css/modal.css')}}">
-
-	
+    <link rel="stylesheet" href="{{url('css/modal.css')}}">	
   </head>
   <body > <!-- class="goto-here" -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -45,53 +44,9 @@
               </div>
             </li>
 
-            <li class="nav-item"><a href="/cart" class="nav-link"><i class="fa fa-shopping-cart" style="color: #000000; font-size:15px"></i></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"data-toggle="modal" data-target="#loginModal"><i class="fas fa-user" style="color: #000000; font-size:15px"></i></a></li>
+            <li class="nav-item"><a href="/cart" class="nav-link"><i class="fa fa-shopping-cart" ></i></a></li>
+            <li class="nav-item"><a href="/login" class="nav-link"><i class="fas fa-user" ></i></a></li>
 	        </ul>
-          
-
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-title text-center">
-          <h4>Login</h4>
-        </div>
-        <div class="d-flex flex-column text-center">
-          <form action="" method="post">
-            @csrf
-            <div class="form-group">
-              <input type="email" class="form-control" name="email" id="email1"placeholder="Your email address...">
-              @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" name="password" id="password1" placeholder="Your password...">
-              @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-            </div>
-            <button type="submit" class="btn-custom btn-block btn-round">Login</button>
-          </form>
-      </div>
-    </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <div class="signup-section">Not a member yet? <a href="#a" class="a-custom"> Sign Up</a>.</div>
-      </div>
-  </div>
-</div>
-
-
 </nav>
 
 
@@ -108,19 +63,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-         
     <!-- END nav -->
 @yield('content')
 	

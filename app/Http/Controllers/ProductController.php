@@ -2,7 +2,7 @@
    
 namespace App\Http\Controllers;
    
-use App\Product;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Redirect,Response,DB;
 use File;
@@ -12,57 +12,41 @@ class ProductController extends Controller
 {
     public function index()
     {
-        if(request()->ajax()) {
-            return datatables()->of(Product::select('*'))
-            ->addColumn('action', 'product-button')
-            ->addColumn('image', 'image')
-            ->rawColumns(['action','image'])
-            ->addIndexColumn()
-            ->make(true);
-        }
-        return view('list');
+        return view('add');
     } 
  
-    public function store(Request $request)
+    public function Product_upload(Request $req)
     {  
-        request()->validate([
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-       ]);
- 
-        $productId = $request->product_id;
- 
-        $details = ['title' => $request->title, 'product_code' => $request->product_code, 'description' => $request->description];
- 
-        if ($files = $request->file('image')) {
-            
-           //delete old file
-           \File::delete('public/product/'.$request->hidden_image);
-         
-           //insert new file
-           $destinationPath = 'public/product/'; // upload path
-           $profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
-           $files->move($destinationPath, $profileImage);
-           $details['image'] = "$profileImage";
+        $validator = Validator::make($request->all(), [
+            'p_Name' => 'required',
+            'p_Price' => 'required',
+            'p_Category' => 'required',
+            'p_Images' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+          ]);
+    
+    
+          if ($validator->passes()) {
+    
+            $input = new product();
+    
+
+            $image=$req->file('image');
+            $ext=rand().".".$image->getClientOriginalName();
+            $image->move('images/',$ext);
+            $input->p_Images=$ext;
+        
+            $input->p_Images=$ext;
+            $input->save();
+    
+    
+            AjaxImage::create($input);
+    
+    
+            return response()->json(['success'=>'done']);
+          }
+    
+    
+          return response()->json(['error'=>$validator->errors()->all()]);
         }
-         
-        $product   =   Product::updateOrCreate(['id' => $productId], $details);  
-               
-        return Response::json($product);
-    } 
- 
-    public function edit($id)
-    {   
-        $where = array('id' => $id);
-        $product  = Product::where($where)->first();
-      
-        return Response::json($product);
-    }
-    public function destroy($id) 
-    {
-        $data = Product::where('id',$id)->first(['image']);
-        \File::delete('public/product/'.$data->image);
-        $product = Product::where('id',$id)->delete();
-      
-        return Response::json($product);
-    }
+
 }

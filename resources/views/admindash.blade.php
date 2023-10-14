@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link href="main.css" rel="stylesheet">
     <link rel="stylesheet" href="{{url('css/main.css')}}">
     <link rel="stylesheet" href="{{url('css/dashboardstyle.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 </head>
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header ">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
-                <div class="logo-src Logo"><a href="/"><img  src="images/dashboard/logo.png" alt="no pic"></a></div>
+                <div class="logo-src Logo"><a href="/"><img  src="" alt="no pic"></a></div>
                 <div class="header__pane ml-auto">
                     <div>
                         <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
@@ -111,7 +112,8 @@
                     </div>        
                 </div>
             </div>
-        </div>     
+        </div>  
+<div>
                 <div class="app-main">
                 <div class="app-sidebar sidebar-shadow">
                     <div class="app-header__logo">
@@ -143,7 +145,8 @@
                                 </span>
                             </button>
                         </span>
-                    </div>    <div class="scrollbar-sidebar">
+                    </div> 
+                       <div class="scrollbar-sidebar">
                         <div class="app-sidebar__inner">
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Dashboards</li>
@@ -184,13 +187,16 @@
                                                        </div>
                     </div>
                 </div> 
+</div>
+</div>
+
+
 
 
 
 
 
 @yield('superadmin')
-              
 <div class="app-wrapper-footer">
                         <div class="app-footer">
                             <div class="app-footer__inner">

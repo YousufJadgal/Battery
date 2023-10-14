@@ -40,11 +40,15 @@ Route::get('/product-single', function (){
   Route::get('/superad',function(){
     return view('superadmin');
   });
+   Route::get('/login',function(){
+    return view('login');
+   });
   Route::get('/add',function(){
     return view('addproduct');
   });
+  
 
-  Route::get('product-list', [ProductController::class, 'index']);
-  Route::get('product-list/{id}/edit', [ProductController::class, 'edit']);
-  Route::post('product-list/store', [ProductController::class, 'store']);
-  Route::get('product-list/delete/{id}', [ProductController::class, 'destroy']);
+  // Route::get('/Product_Upload', [ProductController::class, '/Product_Upload_']);
+  // Route::get('product-list/{id}/edit', [ProductController::class, 'edit']);
+  Route::post('/Product_Upload', [ProductController::class, 'Product_upload']);
+  // Route::get('product-list/delete/{id}', [ProductController::class, 'destroy']);
